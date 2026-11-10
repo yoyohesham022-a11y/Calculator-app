@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Comfortaa', cursive;
+    background-color: #f5f5f5;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.calculator{
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    box-shadow:  6px 6px 16px rgba(255, 255, 255, 0.2), 
+                inset -6px -6px 16px rgba(0,0,0,0.166);
+    width: 350px;
+    border: 1px solid #e0e0e0;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    backdrop-filter: blur(10px);
+    height: 500px;
+    isolation: isolate;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 1s ease-in-out;
+}
+.calculator > input{
+    background-color: #e0e0e0;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: inset 6px 6px 16px rgba(255, 255, 255, 0.2), 
+                inset -6px -6px 16px rgba(0,0,0,0.166);
+    text-align: right;
+    padding-right: 20px;
+    font-size: 35px;
+    border: none;
+    width: 100%;
+    font-family: 'Comfortaa', cursive;
+    height: 70px;
+    color: #333;
+    transition: all 0.2s ease-in-out;
+}
+.btns{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.btns > button{
+    background-color: #e0e0e0;
+    border: 1px solid #e0e0e0;
+    text-align: center;
+    padding: 20px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: inset 6px 6px 16px rgba(255, 255, 255, 0.2), 
+                inset -6px -6px 16px rgba(0,0,0,0.166);
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    transition: all 0.2s ease-in-out;
+    font-family: 'Comfortaa', cursive;
+}
+.btns > button:hover{
+    background-color: #d1d1d1;
+    box-shadow: inset 6px 6px 16px rgba(255, 255, 255, 0.2), 
+                inset -6px -6px 16px rgba(0,0,0,0.166);
+
+    transform: translateY(-2px);
+}
+.btns > button:active{
+    background-color: #c1c1c1;
+    box-shadow: inset 6px 6px 16px rgba(255, 255, 255, 0.2), 
+                inset -6px -6px 16px rgba(0,0,0,0.166);
+    transform: translateY(2px);
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes inputFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes buttonFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes newValueComeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.created{
+    position: absolute;
+    bottom: -20px;
+    left: 20px;
+    font-size: 15px;
+    color: #333;
+    opacity: 0.5;
+}
