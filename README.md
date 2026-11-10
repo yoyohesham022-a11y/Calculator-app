@@ -1,3 +1,2 @@
 ## (Preview)
-
-![شكل الآلة الحاسبة النهائي](images/calculator-preview.png)
+(images/calculator-preview.png)
